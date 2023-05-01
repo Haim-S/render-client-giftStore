@@ -6,10 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import ProviderAuth from "./context/contextAuth";
 import ProviderContainer from "./context/contextController";
 import ProviderOrder from './context/contextOrder';
+import ProviderBrain from './context/contextTheBrain';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <ProviderBrain>
     <ProviderAuth>
       <ProviderContainer>
         <ProviderOrder>
@@ -17,6 +19,7 @@ root.render(
         </ProviderOrder>
       </ProviderContainer>
     </ProviderAuth>
+    </ProviderBrain>
   </React.StrictMode>
 );
 

@@ -6,10 +6,12 @@ import {formatPrice} from "../../utils/CalculateAndWritePrice";
 import {UseOrderContext} from "../../context/contextOrder";
 import checkIfSevenDaysPassed from '../../utils/isSevenDaysPassed';
 import Alert from '@mui/material/Alert';
+import {UseTheBrainContext} from "../../context/contextTheBrain";
 
 const OrderTable = () => {
 
     const {products, Use_DeleteOrder} = UseOrderContext();
+    const {Use_randomDaysToDiscount} = UseTheBrainContext();
 
     const [notCancel, setNotCancel] = useState(true)
     const [success, setSuccess] = useState(false)
@@ -25,6 +27,7 @@ return date.toLocaleDateString();
 
       if(checkIfSevenDaysPassed(creatAt)){
        await Use_DeleteOrder(id)
+       Use_randomDaysToDiscount();
        setSuccess(true);
        setTimeout(()=> {
         setSuccess(false);

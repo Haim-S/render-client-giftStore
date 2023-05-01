@@ -15,7 +15,6 @@ const ShoppingCart = () => {
   const deleteOne = UseContextControllers().deleteOne;
   const {setCart} = UseContextControllers();
 
-  // const Use_CreateOrder = UseOrderContext().Use_CreateOrder;
   const {Use_CreateOrder} = UseOrderContext();
 
   
