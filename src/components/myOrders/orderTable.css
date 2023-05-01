@@ -1,0 +1,15 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  thead{
+    background-color: #dcdcdc;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 4px;
+  }
+  
+  tr:nth-child(even) {background-color: #dcdcdc;}

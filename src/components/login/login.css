@@ -1,0 +1,20 @@
+
+.LoginBox{
+    width: 30%;
+    padding-top: 10px;
+}
+
+.registerBox{
+    width: 100%;
+    padding-top: 10px;
+}
+
+.LoginTitle{
+    font-size: 50px;
+    color: var(--titleColor);
+}
+
+.sign-color{
+    color: #F79F1F;
+  cursor: pointer;
+}
