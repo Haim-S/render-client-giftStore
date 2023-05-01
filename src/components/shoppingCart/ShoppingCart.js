@@ -33,7 +33,7 @@ const handleButtonCheckOut = async (cart, total)=>{
 
 const handleButtonClear = () => {
 
-  setCart("")
+  setCart([])
 }
 
 
