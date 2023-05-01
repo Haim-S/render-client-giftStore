@@ -13,6 +13,7 @@ const ShoppingCart = () => {
   const cart = UseContextControllers().cart;
   const editQuantity = UseContextControllers().editQuantity;
   const deleteOne = UseContextControllers().deleteOne;
+  const setCart = UseContextControllers().setCart;
 
   // const Use_CreateOrder = UseOrderContext().Use_CreateOrder;
   const {Use_CreateOrder} = UseOrderContext();
@@ -28,6 +29,11 @@ const handleButtonCheckOut = async (cart, total)=>{
 
  await Use_CreateOrder(value, total);
 
+}
+
+const handleButtonClear = () => {
+
+  setCart("")
 }
 
 
@@ -51,7 +57,7 @@ const handleButtonCheckOut = async (cart, total)=>{
   
 </table>
 <div className='TheBill'>
-  <button className='BtnClearCart'>CLEAR CART</button>
+  <button onClick={()=> handleButtonClear} className='BtnClearCart'>CLEAR CART</button>
   
   <div>
     <p>Total ({cart.length}) items: <span className='paragraphTotalPrice'>{formatPrice(totalPriceItems)}</span></p>

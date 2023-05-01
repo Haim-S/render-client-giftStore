@@ -56,7 +56,7 @@ setCart(cartCopy);
 
 
 return(
-    <ContextControllers.Provider value={{cartArray,editQuantity,deleteOne, cart}}>
+    <ContextControllers.Provider value={{cartArray,editQuantity,deleteOne, cart, setCart}}>
         {children}
     </ContextControllers.Provider>
 );
